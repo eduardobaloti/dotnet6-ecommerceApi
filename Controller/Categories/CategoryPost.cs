@@ -15,14 +15,8 @@ namespace udemy_dotnet.Controller.Categories
 
         public static IResult Action(CategoryRequest categoryRequest, ApplicationDbContext context)
         {
-            var category = new Category(categoryRequest.Name)
-            {
-                Name = categoryRequest.Name,
-                CreatedBy = "Test",
-                CreatedOn = DateTime.Now,
-                EditedBy = "Test",
-                EditedOn = DateTime.Now, 
-            };
+            var category = new Category(categoryRequest.Name, "Test", "Test");
+  
 
             if (!category.IsValid)
                 return Results.BadRequest(category.Notifications);

@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Flunt.Notifications;
+using Flunt.Notifications;
 using Microsoft.EntityFrameworkCore;
 using udemy_dotnet.models.Domains;
 
